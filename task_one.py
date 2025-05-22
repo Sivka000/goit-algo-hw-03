@@ -13,8 +13,11 @@ def get_days_from_today(date_str: str) -> int:
             )
 def start_program():
     user_input = input(
-        "Вітаю! \nВведіть дату у форматі РРРР-ММ-ДД: "
-        )
+        "Вітаю!" \
+        "\nЦей додаток який може вираховати кількість днів між заданою датою і поточною датою."
+        "\nВведіть дату у форматі РРРР-ММ-ДД: "
+    )
+    
     try:
         user_days = get_days_from_today(user_input)
         if user_days > 0:
