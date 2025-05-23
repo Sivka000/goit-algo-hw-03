@@ -19,8 +19,13 @@ def main():
     try:
         with open(input_file, 'r', encoding='utf-8') as file:
             raw_numbers = file.readlines()
+
     except FileNotFoundError:
-        print(f"Файл '{input_file}' Помилка файлу")
+        print(
+            "               Помилка!"
+            "\nФайл не знайдено або ім'я файлу невірна"
+            f"\nНазва файлу повинна бути: '{input_file}'"
+            )
         return
     
     sanitized_numbers = [normalize_phone(num) for num in raw_numbers]
